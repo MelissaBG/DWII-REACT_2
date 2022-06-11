@@ -31,19 +31,20 @@ export const filmes = [
     generos: ["Comédia"]
   }
 ];
-function FilmeCard(props) { 
+function FilmeCard(props) {
   const filme = props.filme;
   const nome = filme.nome;
   const oscar = filme.oscar;
 
   return (
     <div>
-      <h3>{oscar && <span role ="img" </span>} {nome}</h3>
+      <h3>
+        {oscar && <span role="img"> 🤩</span>} {nome}
+      </h3>
     </div>
   );
 }
 
- function App() {
-  return filmes.map((filme) => <FilmeCard filme ={filme} />);
+export function App() {
+  return filmes.map((filme) => <FilmeCard filme={filme} />);
 }
-
